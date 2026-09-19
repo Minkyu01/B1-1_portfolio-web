@@ -21,7 +21,7 @@ assert.equal(initialDarkState.theme, "dark");
 assert.equal(initialFallbackState.theme, "light");
 assert.equal(initialDarkState.projects.status, PROJECT_STATUS.idle);
 assert.equal(initialDarkState.projects.username, DEFAULT_GITHUB_USERNAME);
-assert.equal(DEFAULT_GITHUB_USERNAME, "codyssey0");
+assert.equal(DEFAULT_GITHUB_USERNAME, "Minkyu01");
 assert.equal(THEME_STORAGE_KEY, "portfolio-theme");
 assert.deepEqual(THRESHOLDS, { scrollTop: 300, navigation: 60, reveal: 0.25 });
 

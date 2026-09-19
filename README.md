@@ -4,16 +4,16 @@
 
 | 항목 | 주소 |
 | --- | --- |
-| 배포 URL (GitHub Pages) | <https://codyssey0.github.io/B1-1_portfolio-web/> |
-| GitHub 저장소 | <https://github.com/codyssey0/B1-1_portfolio-web> |
+| 배포 URL (GitHub Pages) | <https://minkyu01.github.io/B1-1_portfolio-web/> |
+| GitHub 저장소 | <https://github.com/Minkyu01/B1-1_portfolio-web> |
 
-> **배포 상태 (2026-09-19):** 배포 완료 — GitHub Pages가 `gh-pages` 브랜치에서 서비스 중입니다. 배포 주소에서 `node tests/e2e_browser.mjs --url=…` 59개 검사를 모두 통과했고, 실제 GitHub API 호출도 확인했습니다.
+> **배포 상태 (2026-09-19):** 저장소를 조직 `codyssey0`에서 `Minkyu01` 계정으로 옮겼고, 새 주소로 재배포한 뒤 확인하는 중입니다. 새 주소에서의 검증 결과는 [제출 안내](docs/submission.md)의 배포 기록에 적습니다.
 
 ## 프로젝트 소개
 
 이 프로젝트의 핵심은 **이벤트 → 상태 변경 → DOM 업데이트**입니다. 이벤트는 클릭이나 입력처럼 브라우저에서 일어난 일입니다. 상태는 현재 테마, 메뉴가 열렸는지, API 요청이 어느 단계인지 같은 값입니다. DOM(Document Object Model)은 JavaScript가 읽고 바꿀 수 있는 웹 문서 구조입니다.
 
-페이지에는 Hero(인사말·CTA), About(자기소개·프로필 이미지), Skills, Projects(GitHub API 카드), Contact(문의 폼), Footer가 있습니다. 페이지를 열면 GitHub API에서 기본 계정(`codyssey0`)의 공개 저장소를 자동으로 불러와 카드로 보여 주고, 로딩·성공·빈 결과·오류(재시도 버튼 포함)를 각각 다른 화면으로 표현합니다. 입력창에 다른 사용자명을 넣으면 그 계정의 저장소로 목록이 바뀝니다.
+페이지에는 Hero(인사말·CTA), About(자기소개·프로필 이미지), Skills, Projects(GitHub API 카드), Contact(문의 폼), Footer가 있습니다. 페이지를 열면 GitHub API에서 기본 계정(`Minkyu01`)의 공개 저장소를 자동으로 불러와 카드로 보여 주고, 로딩·성공·빈 결과·오류(재시도 버튼 포함)를 각각 다른 화면으로 표현합니다. 입력창에 다른 사용자명을 넣으면 그 계정의 저장소로 목록이 바뀝니다.
 
 ## 스크린샷
 
@@ -52,7 +52,7 @@ GitHub Pages는 브랜치의 파일을 그대로 서비스합니다. 이 저장�
    git push origin main:gh-pages
    ```
 
-3. 1분쯤 뒤 <https://codyssey0.github.io/B1-1_portfolio-web/>에서 확인합니다.
+3. 1분쯤 뒤 <https://minkyu01.github.io/B1-1_portfolio-web/>에서 확인합니다.
 
 `gh-pages`는 `main`의 사본이라 `main`만 고치고 올리지 않으면 사이트는 예전 그대로입니다. 브랜치를 하나로 줄이고 싶다면 저장소 **Settings → Pages**에서 **Source: Deploy from a branch**, **Branch: `main` / `(root)`**로 바꾸고 `gh-pages`를 지우면 됩니다.
 
@@ -61,7 +61,7 @@ GitHub Pages는 브랜치의 파일을 그대로 서비스합니다. 이 저장�
 배포된 주소도 로컬과 같은 기준으로 검사할 수 있습니다.
 
 ```bash
-node tests/e2e_browser.mjs --url=https://codyssey0.github.io/B1-1_portfolio-web/
+node tests/e2e_browser.mjs --url=https://minkyu01.github.io/B1-1_portfolio-web/
 ```
 
 ## 실행 방법
@@ -347,7 +347,7 @@ all portfolio tests passed
 완성 단계에서 정한 결정과 이유입니다.
 
 - **명세 문구를 그대로 화면에 둔다.** 동료 평가는 명세의 문구로 확인하므로 로딩은 "로딩 중...", 오류는 "프로젝트를 불러올 수 없습니다", 빈 상태는 "표시할 프로젝트가 없습니다"로 맞췄습니다. 오류는 원인이 무엇이든 같은 첫 문장으로 시작하고 원인 안내를 덧붙입니다.
-- **페이지를 열면 기본 계정을 자동으로 불러오고, 입력창은 남긴다.** 명세가 "본인의 저장소 목록을 가져와 렌더링"하라고 했기 때문입니다. 입력창은 평가하는 사람이 빈 결과·404·다른 계정 같은 상태를 직접 만들어 볼 수 있게 남겼습니다. 기본 계정은 `js/portfolio_state.js`의 `DEFAULT_GITHUB_USERNAME` 한 줄이며 저장소 주소의 소유자(`codyssey0`)로 정했습니다.
+- **페이지를 열면 기본 계정을 자동으로 불러오고, 입력창은 남긴다.** 명세가 "본인의 저장소 목록을 가져와 렌더링"하라고 했기 때문입니다. 입력창은 평가하는 사람이 빈 결과·404·다른 계정 같은 상태를 직접 만들어 볼 수 있게 남겼습니다. 기본 계정은 `js/portfolio_state.js`의 `DEFAULT_GITHUB_USERNAME` 한 줄이며 본인 GitHub 계정(`Minkyu01`)으로 정했습니다.
 - **기준값은 명세 예시와 같은 300px·60px로 맞췄다.** 임의의 값(320px·64px)을 두면 평가하는 사람이 명세대로 확인할 때 헷갈립니다. 등장 효과는 권장 범위(0.2 이상) 안의 0.25를 유지했습니다.
 - **로딩 표시는 문구와 CSS 스피너를 함께 쓴다.** 스피너는 `::before`로 그려 HTML을 늘리지 않았고, 움직임 줄이기 설정에서는 멈춥니다.
 - **맨 위로 버튼은 `hidden` 속성 대신 `visibility`로 숨긴다.** `.scroll-top`의 `display: inline-flex`가 `hidden`을 덮어써서 보이지 않는 버튼이 Tab 순서에 남는 문제를 브라우저 테스트로 발견했습니다. `visibility: hidden`은 화면과 Tab 순서에서 함께 빠지고, 지연 전환으로 페이드는 유지됩니다.
@@ -355,6 +355,7 @@ all portfolio tests passed
 - **Footer 링크는 실제 GitHub 프로필과 저장소로 연결한다.** LinkedIn은 개인 주소를 알 수 없어 서비스 첫 화면으로 가는 링크를 두지 않고 뺐습니다. 필요하면 `index.html`의 Footer에 한 줄을 추가하세요.
 - **브라우저 테스트는 외부 패키지 없이 만든다.** Node 내장 WebSocket으로 Chrome DevTools Protocol을 직접 사용해 "설치 없이 실행" 원칙을 지켰습니다. 실제 GitHub API는 `--live`일 때만 호출해 한도를 아낍니다.
 - **과제 원문(`project.md`)은 저장소에 올리지 않는다.** 원문은 평가 기준으로만 쓰고 결과물과 분리했습니다(`.gitignore`).
+- **저장소를 조직(`codyssey0`)에서 개인 계정(`Minkyu01`)으로 옮겼다.** 코디세이 플랫폼의 GitHub 연동(ID + 토큰)이 개인 계정의 저장소를 목록으로 보여 주는데, 조직 저장소는 그 목록에 나타나지 않았기 때문입니다. 저장소가 옮겨지면서 배포 주소도 `codyssey0.github.io`에서 `minkyu01.github.io`로 바뀌었습니다(GitHub Pages 주소는 자동으로 넘어가지 않습니다).
 - **배포는 `gh-pages` 브랜치로 한다.** 저장소 설정 화면(관리자 로그인)을 거치지 않고 `git push`만으로 Pages가 켜졌기 때문입니다. 대신 `main`의 사본을 따로 올려야 한다는 부담이 있어, 갱신 명령을 [배포](#배포)에 적어 두었습니다.
 
 ## 현재 한계와 확장 방향

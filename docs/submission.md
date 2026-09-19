@@ -4,8 +4,8 @@
 
 | 항목 | 값 | 상태 |
 | --- | --- | --- |
-| GitHub 저장소 URL | <https://github.com/codyssey0/B1-1_portfolio-web> | 업로드 완료 — 공개 저장소, `main`과 `gh-pages` (2026-09-19) |
-| 배포된 사이트 URL (GitHub Pages) | <https://codyssey0.github.io/B1-1_portfolio-web/> | **배포 완료** — `gh-pages` 브랜치에서 서비스 중, 아래 검증 통과 (2026-09-19) |
+| GitHub 저장소 URL | <https://github.com/Minkyu01/B1-1_portfolio-web> | 공개 저장소, `main`과 `gh-pages`. 조직 `codyssey0`에서 `Minkyu01` 계정으로 옮김 (2026-09-19) |
+| 배포된 사이트 URL (GitHub Pages) | <https://minkyu01.github.io/B1-1_portfolio-web/> | 저장소를 옮기면서 주소가 바뀜 — 재배포 후 확인 중 |
 | 데스크톱 스크린샷 | [`docs/screenshots/desktop.png`](screenshots/desktop.png) | 완료 |
 | 모바일 스크린샷 | [`docs/screenshots/mobile.png`](screenshots/mobile.png), [메뉴 열림](screenshots/mobile-menu.png) | 완료 |
 | 다크 모드 스크린샷 | [`docs/screenshots/dark-mode.png`](screenshots/dark-mode.png) | 완료 |
@@ -14,6 +14,8 @@
 스크린샷은 `node tests/e2e_browser.mjs --live --screenshots`로 만든 실제 화면이다. Projects 카드는 사용자명 입력창에 `octocat`을 넣은 실제 GitHub API 결과다.
 
 ## 배포 기록
+
+아래 첫 세 줄은 저장소가 조직 `codyssey0`에 있던 때의 기록이다(주소 `https://codyssey0.github.io/B1-1_portfolio-web/`). 그 뒤 저장소를 `Minkyu01` 계정으로 옮겨 주소가 바뀌었고, 새 주소에서의 검증은 표의 뒷부분에 적는다.
 
 | 날짜 | 한 일 | 결과 |
 | --- | --- | --- |
@@ -33,7 +35,7 @@ git push origin main:gh-pages
 3. 1분쯤 뒤 배포 주소에서 확인하고 같은 기준으로 검사한다.
 
 ```bash
-node tests/e2e_browser.mjs --url=https://codyssey0.github.io/B1-1_portfolio-web/
+node tests/e2e_browser.mjs --url=https://minkyu01.github.io/B1-1_portfolio-web/
 ```
 
 브랜치를 하나로 줄이려면 저장소 **Settings → Pages**에서 **Source: Deploy from a branch**, **Branch: `main` / `(root)`**로 바꾸고 `gh-pages`를 지운다.

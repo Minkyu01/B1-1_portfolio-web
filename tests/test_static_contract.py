@@ -190,15 +190,15 @@ def check_scripts(main_js: str, state_js: str, html: str, css: str) -> None:
     require("reveal: 0.25" in state_js, "reveal threshold must be 0.25")
     require("escapeHtml" in state_js and "safeRepositoryUrl" in state_js, "API card output must be sanitized")
     require("INVALID_PROJECT_PAYLOAD" in state_js, "malformed API payload must use an error state")
-    require('DEFAULT_GITHUB_USERNAME = "codyssey0"' in state_js, "default GitHub account is not configured")
+    require('DEFAULT_GITHUB_USERNAME = "Minkyu01"' in state_js, "default GitHub account is not configured")
 
 
 def check_documents(readme: str, package: dict[str, object]) -> None:
     # 원문 4.10: README에 프로젝트 설명, 사용 기술, 배포 URL, 스크린샷이 포함되어야 한다.
     for heading in ("## 프로젝트 소개", "## 사용 기술", "## 배포", "## 스크린샷"):
         require(heading in readme, f"README section is missing: {heading}")
-    require(re.search(r"https://codyssey0\.github\.io/B1-1_portfolio-web/?", readme), "README needs the GitHub Pages URL")
-    require("https://github.com/codyssey0/B1-1_portfolio-web" in readme, "README needs the repository URL")
+    require(re.search(r"https://minkyu01\.github\.io/B1-1_portfolio-web/?", readme), "README needs the GitHub Pages URL")
+    require("https://github.com/Minkyu01/B1-1_portfolio-web" in readme, "README needs the repository URL")
     for screenshot in ("desktop.png", "mobile.png", "dark-mode.png"):
         require(f"docs/screenshots/{screenshot}" in readme, f"README does not embed {screenshot}")
         require((ROOT / "docs" / "screenshots" / screenshot).is_file(), f"missing screenshot file: {screenshot}")

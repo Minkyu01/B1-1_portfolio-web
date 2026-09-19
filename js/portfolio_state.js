@@ -1,7 +1,7 @@
 export const THEME_STORAGE_KEY = "portfolio-theme";
 
 // Projects 섹션이 페이지를 열자마자 불러올 GitHub 계정. 방문자는 입력창에서 다른 계정으로 바꿔 볼 수 있다.
-export const DEFAULT_GITHUB_USERNAME = "codyssey0";
+export const DEFAULT_GITHUB_USERNAME = "Minkyu01";
 
 export const THRESHOLDS = Object.freeze({
   scrollTop: 300,
