@@ -188,7 +188,7 @@
 | 항목 | 상태 |
 | --- | --- |
 | GitHub 저장소 URL | 완료 — <https://github.com/codyssey0/B1-1_portfolio-web> |
-| 배포된 사이트 URL (GitHub Pages) | **미완** — Pages 설정을 켜야 열린다([제출 안내](submission.md)) |
+| 배포된 사이트 URL (GitHub Pages) | 완료 — <https://codyssey0.github.io/B1-1_portfolio-web/> (`gh-pages` 브랜치, 배포 주소에서 e2e 통과) |
 | 데스크톱·모바일·다크 모드 스크린샷 | 완료 — `docs/screenshots/` |
 | README의 프로젝트 설명·사용 기술·배포 URL·스크린샷 | 완료 |
 

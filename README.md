@@ -7,7 +7,7 @@
 | 배포 URL (GitHub Pages) | <https://codyssey0.github.io/B1-1_portfolio-web/> |
 | GitHub 저장소 | <https://github.com/codyssey0/B1-1_portfolio-web> |
 
-> **배포 상태 (2026-09-19):** 코드는 저장소 `main`에 올렸습니다. GitHub Pages는 아직 켜지 않아 위 배포 주소는 404입니다. 저장소 **Settings → Pages**에서 켠 뒤 [배포](#배포)의 검증 명령으로 확인합니다.
+> **배포 상태 (2026-09-19):** 배포 완료 — GitHub Pages가 `gh-pages` 브랜치에서 서비스 중입니다. 배포 주소에서 `node tests/e2e_browser.mjs --url=…` 59개 검사를 모두 통과했고, 실제 GitHub API 호출도 확인했습니다.
 
 ## 프로젝트 소개
 
@@ -43,11 +43,18 @@ React, Vue, jQuery, Bootstrap, Tailwind CSS 같은 외부 라이브러리와 웹
 
 ## 배포
 
-GitHub Pages는 브랜치의 파일을 그대로 서비스합니다. 이 저장소는 별도 빌드가 필요 없어 다음 순서면 됩니다.
+GitHub Pages는 브랜치의 파일을 그대로 서비스합니다. 이 저장소는 별도 빌드가 필요 없고, **`gh-pages` 브랜치**를 배포 브랜치로 씁니다.
 
-1. `main` 브랜치에 파일을 올립니다.
-2. 저장소의 **Settings → Pages**에서 **Source: Deploy from a branch**, **Branch: `main` / `(root)`**를 선택하고 저장합니다.
-3. 1~2분 뒤 <https://codyssey0.github.io/B1-1_portfolio-web/>에서 확인합니다.
+1. 코드를 고치고 `main`에 커밋합니다.
+2. `main`의 내용을 `gh-pages`로 올립니다. 처음 `gh-pages`를 push하면 GitHub가 Pages를 자동으로 켜고, 이후에는 push할 때마다 사이트가 갱신됩니다.
+
+   ```bash
+   git push origin main:gh-pages
+   ```
+
+3. 1분쯤 뒤 <https://codyssey0.github.io/B1-1_portfolio-web/>에서 확인합니다.
+
+`gh-pages`는 `main`의 사본이라 `main`만 고치고 올리지 않으면 사이트는 예전 그대로입니다. 브랜치를 하나로 줄이고 싶다면 저장소 **Settings → Pages**에서 **Source: Deploy from a branch**, **Branch: `main` / `(root)`**로 바꾸고 `gh-pages`를 지우면 됩니다.
 
 저장소 루트의 빈 `.nojekyll` 파일은 GitHub Pages가 Jekyll 변환을 건너뛰고 파일을 그대로 서비스하게 합니다.
 
@@ -325,7 +332,7 @@ all portfolio tests passed
 | `node tests/e2e_browser.mjs --live --screenshots` | `docs/screenshots/`의 스크린샷 다시 만들기(라이브 검사 2건 + 스크린샷 4건 = 요청 6건) |
 | `node tests/e2e_browser.mjs --url=<배포 주소>` | 배포된 사이트를 같은 기준으로 검사 |
 
-2026-09-19에 Node.js `v24.18.1`, Python `3.10.20`, Chrome `153`에서 모두 통과했고, `--live`로 실제 API 호출도 확인했습니다.
+2026-09-19에 Node.js `v24.18.1`, Python `3.10.20`, Chrome `153`에서 모두 통과했고, `--live`로 실제 API 호출도 확인했습니다. 배포된 주소(`--url`)에서도 59개 검사와 실제 API 확인을 통과했습니다.
 
 ### 직접 확인할 항목
 
@@ -348,6 +355,7 @@ all portfolio tests passed
 - **Footer 링크는 실제 GitHub 프로필과 저장소로 연결한다.** LinkedIn은 개인 주소를 알 수 없어 서비스 첫 화면으로 가는 링크를 두지 않고 뺐습니다. 필요하면 `index.html`의 Footer에 한 줄을 추가하세요.
 - **브라우저 테스트는 외부 패키지 없이 만든다.** Node 내장 WebSocket으로 Chrome DevTools Protocol을 직접 사용해 "설치 없이 실행" 원칙을 지켰습니다. 실제 GitHub API는 `--live`일 때만 호출해 한도를 아낍니다.
 - **과제 원문(`project.md`)은 저장소에 올리지 않는다.** 원문은 평가 기준으로만 쓰고 결과물과 분리했습니다(`.gitignore`).
+- **배포는 `gh-pages` 브랜치로 한다.** 저장소 설정 화면(관리자 로그인)을 거치지 않고 `git push`만으로 Pages가 켜졌기 때문입니다. 대신 `main`의 사본을 따로 올려야 한다는 부담이 있어, 갱신 명령을 [배포](#배포)에 적어 두었습니다.
 
 ## 현재 한계와 확장 방향
 
