@@ -36,5 +36,6 @@
 ## 제출 전 확인
 
 - [x] `docs/screenshots/`에 데스크톱·모바일·다크 모드 스크린샷 (`--live --screenshots`)
-- [ ] GitHub 저장소 URL과 GitHub Pages URL을 [제출 안내](submission.md)에 기록
+- [x] GitHub 저장소에 코드 업로드(`main`, 공개 저장소) — [제출 안내](submission.md)에 기록
+- [ ] GitHub Pages 켜기(Settings → Pages → `main` / `(root)`) — 저장소 관리자 권한이 필요해 사용자가 해야 함
 - [ ] 배포된 주소에서 `node tests/e2e_browser.mjs --url=<배포 주소>` 통과

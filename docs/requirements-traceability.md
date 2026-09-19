@@ -13,7 +13,7 @@
 | GitHub API로 본인 저장소를 Projects에 동적 렌더링 | `main.js`의 `loadProjects` — 페이지를 열 때 `state.projects.username`(= `DEFAULT_GITHUB_USERNAME`)으로 자동 호출 | e2e `[4.8]` 자동 로드, `--live` |
 | 로딩·에러·빈 상태 UI | `renderProjects`의 `PROJECT_STATUS` 분기 | e2e `[4.8]`, dom |
 | 다크 모드 `localStorage` 유지 | `writeStoredTheme`·`readStoredTheme` | e2e `[4.5-5]`, dom |
-| GitHub Pages 배포 | [제출 안내](submission.md) | `e2e --url=<배포 주소>` |
+| GitHub Pages 배포 | [제출 안내](submission.md) | 코드는 `main`에 업로드됨. **Pages를 켜기 전이라 `e2e --url`은 아직 실행하지 못함** |
 
 ## 4.1 프로젝트 기본 구성
 
@@ -127,7 +127,7 @@
 
 | 요구 | 구현 | 검증 |
 | --- | --- | --- |
-| GitHub Pages 배포 | [제출 안내](submission.md) | `node tests/e2e_browser.mjs --url=<배포 주소>` |
+| GitHub Pages 배포 | [제출 안내](submission.md) | **미확인** — Pages 설정 전(2026-09-19 접속 시 404). 켠 뒤 `node tests/e2e_browser.mjs --url=<배포 주소>` |
 | README에 소개·사용 기술·배포 URL·스크린샷 | README의 `## 프로젝트 소개`·`## 사용 기술`·`## 배포`·`## 스크린샷` | static |
 
 ## 7. 제약 사항

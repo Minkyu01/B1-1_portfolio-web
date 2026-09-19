@@ -7,7 +7,7 @@
 | 배포 URL (GitHub Pages) | <https://codyssey0.github.io/B1-1_portfolio-web/> |
 | GitHub 저장소 | <https://github.com/codyssey0/B1-1_portfolio-web> |
 
-> **배포 상태:** 코드는 저장소에 올렸고, 위 배포 주소는 GitHub Pages를 켜야 열립니다. 접속은 아직 확인하지 않았습니다.
+> **배포 상태 (2026-09-19):** 코드는 저장소 `main`에 올렸습니다. GitHub Pages는 아직 켜지 않아 위 배포 주소는 404입니다. 저장소 **Settings → Pages**에서 켠 뒤 [배포](#배포)의 검증 명령으로 확인합니다.
 
 ## 프로젝트 소개
 
