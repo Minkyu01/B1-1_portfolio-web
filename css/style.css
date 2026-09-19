@@ -338,6 +338,7 @@ h2,
 h3,
 p {
   overflow-wrap: anywhere;
+  word-break: keep-all;
 }
 
 h1,
