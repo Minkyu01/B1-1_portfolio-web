@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title description">
+  <title id="title">개발 학습을 상징하는 작업 공간</title>
+  <desc id="description">노트북 화면의 코드와 작은 화분이 놓인 단순한 일러스트</desc>
+  <rect width="320" height="320" fill="#eaf1ff"/>
+  <circle cx="254" cy="70" r="36" fill="#c7d2fe"/>
+  <path d="M0 242c56-30 89-31 142-5s106 30 178-6v89H0z" fill="#d6e5ff"/>
+  <rect x="51" y="104" width="188" height="122" rx="12" fill="#1e293b"/>
+  <rect x="63" y="116" width="164" height="88" rx="6" fill="#0f172a"/>
+  <path d="M79 137h42m-42 17h77m-77 17h51m45-34h27m-27 17h21" stroke="#93c5fd" stroke-linecap="round" stroke-width="8"/>
+  <path d="M91 226h108l19 18H72z" fill="#64748b"/>
+  <path d="M129 233h62" stroke="#cbd5e1" stroke-linecap="round" stroke-width="5"/>
+  <path d="M260 181c-13-8-27-2-27 11v30h54v-30c0-13-14-19-27-11z" fill="#0f766e"/>
+  <path d="M260 180c-4-28 9-46 27-54-2 21-13 38-27 54zm-1 0c-16-4-29-18-31-38 21 2 35 16 31 38z" fill="#22c55e"/>
+  <path d="M260 178v29" stroke="#14532d" stroke-linecap="round" stroke-width="4"/>
+</svg>

@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="순수 HTML, CSS, JavaScript로 만든 반응형 학습 포트폴리오">
+    <title>나의 웹 포트폴리오</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">본문으로 건너뛰기</a>
+    <header class="site-header" id="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="#hero" aria-label="포트폴리오 처음으로">
+          <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+          <span>나의 포트폴리오</span>
+        </a>
+        <div class="header-actions">
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="다크 모드 켜기">
+            <span aria-hidden="true">◐</span>
+            <span class="theme-toggle-label">테마</span>
+          </button>
+          <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+            <span class="sr-only">메뉴 열기</span>
+            <span class="menu-line" aria-hidden="true"></span>
+            <span class="menu-line" aria-hidden="true"></span>
+            <span class="menu-line" aria-hidden="true"></span>
+          </button>
+        </div>
+        <nav class="primary-navigation" id="primary-navigation" aria-label="주요 메뉴">
+          <a href="#about">소개</a>
+          <a href="#skills">기술</a>
+          <a href="#projects">프로젝트</a>
+          <a href="#contact">연락</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero section reveal" id="hero" aria-labelledby="hero-title">
+        <div class="shell hero-layout">
+          <div class="hero-copy">
+            <p class="hero-greeting">안녕하세요! 저는 HTML · CSS · JavaScript를 배우는 개발자입니다.</p>
+            <h1 id="hero-title">작은 상호작용을<br>신뢰할 수 있는 경험으로.</h1>
+            <p class="hero-summary">시맨틱 마크업, 반응형 레이아웃, 비동기 상태 처리의 흐름을 직접 구현한 학습용 포트폴리오입니다.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#projects">프로젝트 보기</a>
+              <a class="button button-secondary" href="#contact">연락 남기기</a>
+            </div>
+          </div>
+          <aside class="hero-note" aria-label="포트폴리오 안내">
+            <p class="hero-note-label">현재 초점</p>
+            <ul>
+              <li>접근 가능한 UI 상태</li>
+              <li>모바일 우선 반응형</li>
+              <li>안전한 API 렌더링</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section reveal" id="about" aria-labelledby="about-title">
+        <div class="shell section-layout about-layout">
+          <div class="profile-frame">
+            <img src="images/profile-placeholder.svg" alt="코드 편집기와 식물을 담은 개발 학습 일러스트" width="320" height="320">
+          </div>
+          <article class="section-copy">
+            <p class="eyebrow">About</p>
+            <h2 id="about-title">문제를 작게 나누고, 화면에서 확인합니다.</h2>
+            <p>이 포트폴리오는 프레임워크 없이 DOM 이벤트, 상태 변경, 렌더링을 연결하는 연습을 위해 만들었습니다. 사용자가 누르는 버튼과 입력하는 값이 어떤 화면 변화로 이어지는지 코드와 UI에서 함께 확인할 수 있습니다.</p>
+            <dl class="fact-list">
+              <div><dt>관심</dt><dd>웹 접근성 · 인터랙션</dd></div>
+              <div><dt>방식</dt><dd>작은 상태부터 명확히 렌더링</dd></div>
+              <div><dt>도구</dt><dd>Vanilla JavaScript</dd></div>
+            </dl>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-muted reveal" id="skills" aria-labelledby="skills-title">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="eyebrow">Skills</p>
+            <h2 id="skills-title">기초를 화면의 품질로 연결합니다.</h2>
+          </div>
+          <ul class="skill-list" aria-label="기술 스택">
+            <li><strong>HTML</strong><span>시맨틱 구조와 폼 접근성</span></li>
+            <li><strong>CSS</strong><span>Flexbox, Grid, 반응형 토큰</span></li>
+            <li><strong>JavaScript</strong><span>DOM, 이벤트, 상태 렌더링</span></li>
+            <li><strong>Web API</strong><span>fetch, localStorage, Observer</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section reveal" id="projects" aria-labelledby="projects-title">
+        <div class="shell">
+          <div class="section-heading section-heading-split">
+            <div>
+              <p class="eyebrow">Projects</p>
+              <h2 id="projects-title">GitHub 공개 저장소</h2>
+              <p>GitHub API에서 공개 저장소를 불러와 카드로 보여 줍니다. 페이지를 열면 기본 계정을 자동으로 불러오고, 다른 사용자명을 입력해 결과를 바꿔 볼 수 있습니다. 인증 없이 호출해 시간당 60회 제한이 있으니 반복 새로고침은 피해 주세요.</p>
+            </div>
+          </div>
+          <form class="github-form" id="github-form" novalidate>
+            <div class="field-group github-field">
+              <label for="github-username">GitHub 사용자명</label>
+              <div class="inline-control">
+                <input id="github-username" name="github-username" type="text" autocomplete="off" placeholder="예: octocat" aria-describedby="github-username-error">
+                <button class="button button-primary" type="submit">저장소 불러오기</button>
+              </div>
+              <p class="field-error" id="github-username-error" aria-live="polite"></p>
+            </div>
+          </form>
+          <div class="project-feedback" id="projects-status" role="status" aria-live="polite">프로젝트 목록은 JavaScript가 실행되면 표시됩니다.</div>
+          <div class="projects-grid" id="projects-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="section section-muted reveal" id="contact" aria-labelledby="contact-title">
+        <div class="shell contact-layout">
+          <div class="section-copy">
+            <p class="eyebrow">Contact</p>
+            <h2 id="contact-title">함께 이야기할 주제가 있나요?</h2>
+            <p>이 폼은 유효성 검사 흐름을 보여 주는 학습용 UI입니다. 실제로 메시지를 전송하지 않으며, 유효한 입력은 화면 안에서만 성공 상태로 표시합니다.</p>
+          </div>
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="field-group">
+              <label for="contact-name">이름</label>
+              <input id="contact-name" name="name" type="text" autocomplete="name" aria-describedby="contact-name-error">
+              <p class="field-error" id="contact-name-error" aria-live="polite"></p>
+            </div>
+            <div class="field-group">
+              <label for="contact-email">이메일</label>
+              <input id="contact-email" name="email" type="email" autocomplete="email" aria-describedby="contact-email-error">
+              <p class="field-error" id="contact-email-error" aria-live="polite"></p>
+            </div>
+            <div class="field-group">
+              <label for="contact-message">메시지</label>
+              <textarea id="contact-message" name="message" rows="5" aria-describedby="contact-message-error"></textarea>
+              <p class="field-error" id="contact-message-error" aria-live="polite"></p>
+            </div>
+            <button class="button button-primary" type="submit">메시지 확인하기</button>
+            <p class="form-success" id="contact-success" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <p>© 2026 나의 웹 포트폴리오. HTML · CSS · JavaScript로 만들었습니다.</p>
+        <nav class="social-links" aria-label="소셜 링크">
+          <a href="https://github.com/codyssey0" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://github.com/codyssey0/B1-1_portfolio-web" target="_blank" rel="noopener noreferrer">저장소</a>
+        </nav>
+      </div>
+    </footer>
+
+    <button class="scroll-top" id="scroll-top" type="button" aria-label="페이지 맨 위로 이동">↑ <span>맨 위로</span></button>
+    <noscript><p class="noscript-message">프로젝트 API, 테마, 폼 유효성 검사는 JavaScript를 켜야 동작합니다.</p></noscript>
+  </body>
+</html>

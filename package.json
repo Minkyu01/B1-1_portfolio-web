@@ -1,0 +1,12 @@
+{
+  "name": "b1-1-portfolio-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "순수 HTML, CSS, JavaScript로 만든 반응형 포트폴리오",
+  "scripts": {
+    "start": "python3 -m http.server 4173 --directory .",
+    "check": "bash tests/run_all.sh",
+    "e2e": "node tests/e2e_browser.mjs"
+  }
+}

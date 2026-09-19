@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">포트폴리오 아이콘</title>
+  <rect width="64" height="64" rx="14" fill="#2563eb"/>
+  <path d="M25 22 13 32l12 10M39 22l12 10-12 10M35 18 29 46" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+</svg>

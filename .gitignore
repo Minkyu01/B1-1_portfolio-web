@@ -1,0 +1,7 @@
+.DS_Store
+node_modules/
+__pycache__/
+*.pyc
+
+# 과제 원문(명세)은 평가 기준으로만 쓰고 공개 저장소에는 올리지 않는다.
+project.md
