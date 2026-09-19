@@ -49,6 +49,8 @@ GitHub Pages는 브랜치의 파일을 그대로 서비스합니다. 이 저장�
 2. 저장소의 **Settings → Pages**에서 **Source: Deploy from a branch**, **Branch: `main` / `(root)`**를 선택하고 저장합니다.
 3. 1~2분 뒤 <https://codyssey0.github.io/B1-1_portfolio-web/>에서 확인합니다.
 
+저장소 루트의 빈 `.nojekyll` 파일은 GitHub Pages가 Jekyll 변환을 건너뛰고 파일을 그대로 서비스하게 합니다.
+
 배포된 주소도 로컬과 같은 기준으로 검사할 수 있습니다.
 
 ```bash
@@ -152,6 +154,7 @@ B1-1_portfolio-web/
 │   ├── peer-review.md            # 동료 평가 시연 방법과 설명 포인트
 │   ├── submission.md             # 제출물과 배포 기록
 │   └── screenshots/              # 데스크톱·모바일·다크 모드 스크린샷
+├── .nojekyll                     # Pages가 Jekyll 변환을 건너뛰게 하는 빈 파일
 ├── .vscode/extensions.json       # Live Server 추천 확장
 ├── package.json                  # ES 모듈 선언과 실행·검사 명령
 └── README.md
