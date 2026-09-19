@@ -7,7 +7,7 @@
 | 배포 URL (GitHub Pages) | <https://minkyu01.github.io/B1-1_portfolio-web/> |
 | GitHub 저장소 | <https://github.com/Minkyu01/B1-1_portfolio-web> |
 
-> **배포 상태 (2026-09-19):** 저장소를 조직 `codyssey0`에서 `Minkyu01` 계정으로 옮겼고, 새 주소로 재배포한 뒤 확인하는 중입니다. 새 주소에서의 검증 결과는 [제출 안내](docs/submission.md)의 배포 기록에 적습니다.
+> **배포 상태 (2026-09-19):** 배포 완료 — 저장소를 조직 `codyssey0`에서 `Minkyu01` 계정으로 옮기고 GitHub Pages(`gh-pages` 브랜치)로 다시 배포했습니다. 새 배포 주소에서 `node tests/e2e_browser.mjs --url=…` 59개 검사를 모두 통과했고, 실제 GitHub API 호출도 확인했습니다.
 
 ## 프로젝트 소개
 

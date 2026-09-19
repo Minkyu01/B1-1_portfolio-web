@@ -13,7 +13,7 @@
 | GitHub API로 본인 저장소를 Projects에 동적 렌더링 | `main.js`의 `loadProjects` — 페이지를 열 때 `state.projects.username`(= `DEFAULT_GITHUB_USERNAME`)으로 자동 호출 | e2e `[4.8]` 자동 로드, `--live` |
 | 로딩·에러·빈 상태 UI | `renderProjects`의 `PROJECT_STATUS` 분기 | e2e `[4.8]`, dom |
 | 다크 모드 `localStorage` 유지 | `writeStoredTheme`·`readStoredTheme` | e2e `[4.5-5]`, dom |
-| GitHub Pages 배포 | `gh-pages` 브랜치 → <https://minkyu01.github.io/B1-1_portfolio-web/> ([제출 안내](submission.md)) | 저장소를 옮긴 뒤 새 주소에서 재검증 중 (옮기기 전 주소에서는 `e2e --url` 59/59, `--live` 2/2) |
+| GitHub Pages 배포 | `gh-pages` 브랜치 → <https://minkyu01.github.io/B1-1_portfolio-web/> ([제출 안내](submission.md)) | 저장소를 옮긴 뒤 새 배포 주소에서 `e2e --url` 59/59, `--live` 2/2 (2026-09-19) |
 
 ## 4.1 프로젝트 기본 구성
 

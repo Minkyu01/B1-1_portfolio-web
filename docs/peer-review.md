@@ -188,7 +188,7 @@
 | 항목 | 상태 |
 | --- | --- |
 | GitHub 저장소 URL | 완료 — <https://github.com/Minkyu01/B1-1_portfolio-web> |
-| 배포된 사이트 URL (GitHub Pages) | 재배포 확인 중 — <https://minkyu01.github.io/B1-1_portfolio-web/> (저장소를 옮기면서 주소가 바뀜) |
+| 배포된 사이트 URL (GitHub Pages) | 완료 — <https://minkyu01.github.io/B1-1_portfolio-web/> (`gh-pages` 브랜치, 새 배포 주소에서 e2e 통과) |
 | 데스크톱·모바일·다크 모드 스크린샷 | 완료 — `docs/screenshots/` |
 | README의 프로젝트 설명·사용 기술·배포 URL·스크린샷 | 완료 |
 
