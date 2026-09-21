@@ -330,6 +330,19 @@ export const launchChrome = async (chromePath) => {
     "about:blank",
   ], { stdio: "ignore" });
 
+  // 테스트가 오류로 끝나거나 Ctrl+C로 중단돼도 디버깅 포트가 열린 Chrome과 임시 프로필이 남지 않게 한다.
+  const stopChrome = () => {
+    try {
+      child.kill("SIGKILL");
+    } catch {
+      // 이미 종료된 프로세스다.
+    }
+    rmSync(profileDir, { recursive: true, force: true });
+  };
+
+  process.once("exit", stopChrome);
+  ["SIGINT", "SIGTERM"].forEach((signal) => process.once(signal, () => process.exit(1)));
+
   let debugPort = 0;
 
   for (let attempt = 0; attempt < 150 && !debugPort; attempt += 1) {
@@ -341,7 +354,7 @@ export const launchChrome = async (chromePath) => {
   }
 
   if (!debugPort) {
-    child.kill();
+    stopChrome();
     throw new Error("Chrome did not expose a DevTools port");
   }
 
@@ -352,7 +365,7 @@ export const launchChrome = async (chromePath) => {
     async close() {
       child.kill();
       await sleep(200);
-      rmSync(profileDir, { recursive: true, force: true });
+      stopChrome();
     },
   };
 };
