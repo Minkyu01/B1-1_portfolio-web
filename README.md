@@ -4,10 +4,10 @@
 
 | 항목 | 주소 |
 | --- | --- |
-| 배포 URL (GitHub Pages) | <https://minkyu01.github.io/B1-1_portfolio-web/> |
+| 배포 URL (GitHub Pages) | <https://minkyu01.github.io/B1-1_portfolio-web/> — 2026-09-21에 내림 |
 | GitHub 저장소 | <https://github.com/Minkyu01/B1-1_portfolio-web> |
 
-> **배포 상태 (2026-09-19):** 배포 완료 — 저장소를 조직 `codyssey0`에서 `Minkyu01` 계정으로 옮기고 GitHub Pages(`gh-pages` 브랜치)로 다시 배포했습니다. 새 배포 주소에서 `node tests/e2e_browser.mjs --url=…` 59개 검사를 모두 통과했고, 실제 GitHub API 호출도 확인했습니다.
+> **배포 상태 (2026-09-21):** 평가가 끝나 GitHub Pages를 내렸습니다(`gh-pages` 브랜치 삭제). 위 배포 주소는 더 이상 열리지 않습니다. 코드와 문서는 `main`에 그대로 있고, 다시 올리려면 [배포](#배포)의 명령을 실행하세요. 2026-09-19에는 이 주소에서 `node tests/e2e_browser.mjs --url=…` 59개 검사와 실제 GitHub API 확인을 통과했습니다.
 
 ## 프로젝트 소개
 
@@ -43,6 +43,8 @@ React, Vue, jQuery, Bootstrap, Tailwind CSS 같은 외부 라이브러리와 웹
 
 ## 배포
 
+**지금은 내려가 있습니다(2026-09-21).** 아래는 다시 배포할 때의 절차입니다.
+
 GitHub Pages는 브랜치의 파일을 그대로 서비스합니다. 이 저장소는 별도 빌드가 필요 없고, **`gh-pages` 브랜치**를 배포 브랜치로 씁니다.
 
 1. 코드를 고치고 `main`에 커밋합니다.
@@ -57,6 +59,12 @@ GitHub Pages는 브랜치의 파일을 그대로 서비스합니다. 이 저장�
 `gh-pages`는 `main`의 사본이라 `main`만 고치고 올리지 않으면 사이트는 예전 그대로입니다. 브랜치를 하나로 줄이고 싶다면 저장소 **Settings → Pages**에서 **Source: Deploy from a branch**, **Branch: `main` / `(root)`**로 바꾸고 `gh-pages`를 지우면 됩니다.
 
 저장소 루트의 빈 `.nojekyll` 파일은 GitHub Pages가 Jekyll 변환을 건너뛰고 파일을 그대로 서비스하게 합니다.
+
+사이트를 다시 내리려면 `gh-pages` 브랜치를 지웁니다(`main`은 그대로). 원본은 바로 404가 되고, CDN 캐시 때문에 10분쯤 더 열려 보일 수 있습니다.
+
+```bash
+git push origin --delete gh-pages
+```
 
 배포된 주소도 로컬과 같은 기준으로 검사할 수 있습니다.
 
@@ -356,6 +364,7 @@ all portfolio tests passed
 - **브라우저 테스트는 외부 패키지 없이 만든다.** Node 내장 WebSocket으로 Chrome DevTools Protocol을 직접 사용해 "설치 없이 실행" 원칙을 지켰습니다. 실제 GitHub API는 `--live`일 때만 호출해 한도를 아낍니다.
 - **과제 원문(`project.md`)은 저장소에 올리지 않는다.** 원문은 평가 기준으로만 쓰고 결과물과 분리했습니다(`.gitignore`).
 - **저장소를 조직(`codyssey0`)에서 개인 계정(`Minkyu01`)으로 옮겼다.** 코디세이 플랫폼의 GitHub 연동(ID + 토큰)이 개인 계정의 저장소를 목록으로 보여 주는데, 조직 저장소는 그 목록에 나타나지 않았기 때문입니다. 저장소가 옮겨지면서 배포 주소도 `codyssey0.github.io`에서 `minkyu01.github.io`로 바뀌었습니다(GitHub Pages 주소는 자동으로 넘어가지 않습니다).
+- **평가가 끝나 Pages를 내렸다(2026-09-21).** 평가 뒤에는 공개 사이트를 둘 이유가 없고, 공개 사이트는 그 자체로 외부에 노출되는 면이라 `gh-pages` 브랜치를 지워 내렸습니다. 코드는 `main`에 남아 있어 언제든 다시 올릴 수 있습니다.
 - **배포는 `gh-pages` 브랜치로 한다.** 저장소 설정 화면(관리자 로그인)을 거치지 않고 `git push`만으로 Pages가 켜졌기 때문입니다. 대신 `main`의 사본을 따로 올려야 한다는 부담이 있어, 갱신 명령을 [배포](#배포)에 적어 두었습니다.
 
 ## 현재 한계와 확장 방향

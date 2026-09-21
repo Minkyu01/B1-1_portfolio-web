@@ -5,7 +5,7 @@
 | 항목 | 값 | 상태 |
 | --- | --- | --- |
 | GitHub 저장소 URL | <https://github.com/Minkyu01/B1-1_portfolio-web> | 공개 저장소, `main`과 `gh-pages`. 조직 `codyssey0`에서 `Minkyu01` 계정으로 옮김 (2026-09-19) |
-| 배포된 사이트 URL (GitHub Pages) | <https://minkyu01.github.io/B1-1_portfolio-web/> | **배포 완료** — `gh-pages` 브랜치에서 서비스 중, 아래 검증 통과 (2026-09-19) |
+| 배포된 사이트 URL (GitHub Pages) | <https://minkyu01.github.io/B1-1_portfolio-web/> | **내림** — 평가 종료 후 2026-09-21에 `gh-pages` 브랜치를 삭제해 사이트를 내렸다. 지금은 열리지 않는다 |
 | 데스크톱 스크린샷 | [`docs/screenshots/desktop.png`](screenshots/desktop.png) | 완료 |
 | 모바일 스크린샷 | [`docs/screenshots/mobile.png`](screenshots/mobile.png), [메뉴 열림](screenshots/mobile-menu.png) | 완료 |
 | 다크 모드 스크린샷 | [`docs/screenshots/dark-mode.png`](screenshots/dark-mode.png) | 완료 |
@@ -25,8 +25,11 @@
 | 2026-09-19 | 저장소를 `Minkyu01` 계정으로 옮김(Transfer), `origin`을 바꾸고 `git push origin main` + `git push origin main:gh-pages` | 새 주소 `https://minkyu01.github.io/B1-1_portfolio-web/`가 약 30초 만에 HTTP 200으로 열림(Pages 설정은 그대로 따라옴). 옛 `codyssey0.github.io` 주소는 새 주소로 넘어가지 않는다 |
 | 2026-09-19 | `node tests/e2e_browser.mjs --url=<새 배포 주소>` | 59/59 통과 (GitHub API는 모의 응답) |
 | 2026-09-19 | `node tests/e2e_browser.mjs --live --url=<새 배포 주소> --only='실제 GitHub'` | 2/2 통과. 기본 계정 `Minkyu01`은 공개 저장소 카드 9개가 렌더링되고 콘솔 에러 없음, `octocat`도 실제 카드가 렌더링됨 |
+| 2026-09-21 | `git push origin --delete gh-pages` | 평가 종료 후 Pages 원본 브랜치를 삭제했다. 원본 서버는 곧바로 404(캐시를 피한 요청으로 확인)이고 API의 `has_pages`도 false다. CDN 캐시만 약 10분 남는다 |
 
 ## 배포와 갱신 방법
+
+사이트는 지금 내려가 있다(2026-09-21). 다시 올릴 때 아래 절차를 쓴다.
 
 1. 코드를 고치고 `main`에 커밋한다.
 2. 배포 브랜치를 갱신한다. `gh-pages`는 `main`의 사본이므로 이 단계를 잊으면 사이트는 예전 그대로다.

@@ -39,3 +39,4 @@
 - [x] GitHub 저장소에 코드 업로드(`main`, 공개 저장소) — [제출 안내](submission.md)에 기록
 - [x] GitHub Pages 켜기 — `gh-pages` 브랜치를 push하자 GitHub가 자동으로 켬 (2026-09-19)
 - [x] 배포된 주소에서 `node tests/e2e_browser.mjs --url=<배포 주소>` 통과 — 59/59, `--live` 2/2 (2026-09-19)
+- [x] 평가 종료 후 GitHub Pages를 내림 — `gh-pages` 브랜치 삭제 (2026-09-21)
